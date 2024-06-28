@@ -9,7 +9,7 @@ echo ""
 echo ""
 #sub=$(</dev/urandom tr -dc a-z0-9 | head -c3)
 read -rp "Input Domain Name. Example ( Vpnku ): " -e sub
-DOMAIN=kingvpn.my.id
+DOMAIN=jp1.fun
 SUB_DOMAIN=${sub}.jp1.fun
 CF_ID=jimiprima110@gmail.com
 CF_KEY=95fafeb15dc5d6ec6d998fc0b9b8a81d
