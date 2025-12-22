@@ -99,7 +99,7 @@ sleep 2
 clear
 
 # --- Izin IP (tanpa Revo / tanpa username-expired) ---
-REGIST_URL="https://raw.githubusercontent.com/Jpstore1/jp/main/Regist"
+REGIST_URL=""
 
 # Regist bisa berisi:
 # - daftar IP saja (1 kolom), atau
