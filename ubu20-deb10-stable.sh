@@ -92,25 +92,6 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
     print_error "OpenVZ is not supported"
     exit 1
 fi
-
-# --- SEMUA PENGECEKAN SUDAH LULUS → LANJUTKAN INSTALASI SECARA OTOMATIS ---
-print_ok "${GREENBG} ALL CHECKS PASSED. STARTING INSTALLATION... ${FONT}"
-sleep 2
-clear
-
-# --- Izin IP (tanpa Revo / tanpa username-expired) ---
-REGIST_URL=""
-
-# Regist bisa berisi:
-# - daftar IP saja (1 kolom), atau
-# - IP + kolom tambahan (dipisah spasi)
-if ! curl -fsSL "$REGIST_URL" | awk '{print $1}' | grep -qx "$MYIP"; then
-    print_error "IP ${RED}$MYIP${NC} tidak terdaftar di whitelist. Hubungi admin untuk registrasi."
-    exit 1
-fi
-print_ok "Whitelist IP: ${green}$MYIP${NC} (OK)"
-
-
 # --- Definisi Variabel ---
 REPO="https://raw.githubusercontent.com/Jpstore1/jp/main/"
 start=$(date +%s)
