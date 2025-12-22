@@ -837,8 +837,8 @@ TIMES=30
     fi
     local DATE_FORMAT=$(date '+%d-%m-%Y')
     local TIME_FORMAT=$(date '+%H:%M:%S')
-    local USRSC=$(wget -qO- https://raw.githubusercontent.com/Jpstore1/jp/main/Regist | grep "$ipsaya" | awk '{print $2}' | head -n 1)
-    local EXPSC=$(wget -qO- https://raw.githubusercontent.com/Jpstore1/jp/main/Regist | grep "$ipsaya" | awk '{print $3}' | head -n 1)
+    local USRSC=$(wget -qO-  | grep "$ipsaya" | awk '{print $2}' | head -n 1)
+    local EXPSC=$(wget -qO-  | grep "$ipsaya" | awk '{print $3}' | head -n 1)
     if [[ -z "$passwd" ]]; then
         local passwd_display="<i>(Tidak diubah/digunakan saat ini)</i>"
     else
